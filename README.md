@@ -1,4 +1,4 @@
-# leakage_budgeted_evaluation_02991052
+# document_dedup_merge_budgeted_eval
 
 （文档去重与版本归并场景）如果文档去重与版本归并与下游任务表现变了，下游表现会跟着变吗？用泄漏与重复检测区分相关与因果，给出可证伪的检验。
 
@@ -15,9 +15,9 @@
 仅依赖 Python 标准库。
 
 ```bash
-python leakage_budgeted_evaluation_02991052.py --help
-python leakage_budgeted_evaluation_02991052.py --input sample.txt
-python leakage_budgeted_evaluation_02991052.py --input sample.txt --json
+python document_dedup_merge_budgeted_eval.py --help
+python document_dedup_merge_budgeted_eval.py --input sample.txt
+python document_dedup_merge_budgeted_eval.py --input sample.txt --json
 ```
 
 输入文件按行解析。协议「预算内评测」使用分隔符 `,` 区分标签与载荷。
@@ -50,7 +50,7 @@ python leakage_budgeted_evaluation_02991052.py --input sample.txt --json
 ## 复现步骤
 
 1. 按上面的分隔符准备输入文件，每行一条样本；
-2. 运行 `python leakage_budgeted_evaluation_02991052.py --input sample.txt --json`；
+2. 运行 `python document_dedup_merge_budgeted_eval.py --input sample.txt --json`；
 3. 记录运行环境、输入文件与完整输出；
 4. **未运行的指标不要引用**：本仓库只提供测量方法与判定规则，
    不预填任何实测数字。填入实测值前请确认对应命令与输入一致。
